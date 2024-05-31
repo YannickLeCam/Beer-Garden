@@ -60,6 +60,7 @@ nav{
     font-size: larger;
     position: fixed;
     top: 0;
+    z-index: 99; /*Car les éléments de la gallerie passait par dessus*/
 }
 
 nav ul {
@@ -236,11 +237,11 @@ PARTIE GALERIE
 }
 #galerie img {
     width: 100%;
-    display: block; 
-
+    display: block;
+    transition: 1s; 
 }
 
-figure .hover_content {
+#galerie figure .hover_content {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,9 +250,8 @@ figure .hover_content {
     height: 100%; 
     object-fit: fill;
     background-color:	rgba(197, 157, 95,0.85);
-    transition: opacity 0.3s; 
+    transition: 1s;
     opacity: 0; 
-
 }
 
 .hover_content i{
@@ -261,12 +261,99 @@ figure .hover_content {
     transform: rotate(45deg);
 }
 
-figure:hover .hover_content {
+#galerie figure:hover .hover_content {
     opacity: 1; 
+    transform: scale(1);
     transition: 2s;
 }
-.hover_content:hover i{
+#galerie figure:hover i{
     transition: 2s;
     transform: rotate(225deg);
 }
+/*
+#galerie figure:hover img {
+    transform: scale(1.1);
+}
+*/
 
+/*
+========================================================================
+PARTIE CARD
+========================================================================
+*/
+/*Il manque l'animation sur les images manquant*/
+#cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin:5% 15% 5% 15%;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:3%
+}
+
+.card_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card_content h1 {
+    text-align: center;
+    font-size: x-large;
+}
+
+.card_content p {
+    text-align: center;
+    font-size: medium;
+    color: darkgrey;
+}
+
+.card:hover h1 {
+    color: var(--brown);
+    transition: 0.5s;
+}
+
+/*
+========================================================================
+PARTIE PARALLAXE
+========================================================================
+*/
+
+#parallaxe{
+    background-image: url("../img/h5-parallax-img-2.jpg");
+    min-height: 30vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#parallaxe h1{
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 50px;
+}
+
+#parallaxe p{
+    color:var(--white);
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+}
+/*
+========================================================================
+PARTIE MAPS
+========================================================================
+*/
