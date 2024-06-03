@@ -33,16 +33,18 @@ header{
     flex-wrap: wrap;
 }
 
-header figure {
+header #img_header {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-header img{
-    min-height: 100%;
-    object-fit: fill;
+#img_header img{
+    max-height: 100%;
+    height: 80vh;
 }
+
+
 
 
 
@@ -118,8 +120,6 @@ PARTIE BANNER
 
 #quote_banner {
     background-color: var(--brown);
-    height: 20vh;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,8 +129,10 @@ PARTIE BANNER
     color: var(--white);
     font-size: xx-large;
     text-transform: uppercase;
-    margin: 5%;
+    width: 100%;
+    max-width: 100vw;
     text-align: center;
+    margin: 5%;
 }
 
 /*
@@ -288,7 +290,8 @@ PARTIE CARD
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin:5% 15% 5% 15%;
+    margin:2% 0;
+    gap: 1%;
 }
 
 .card{
@@ -296,7 +299,7 @@ PARTIE CARD
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin:3%
+    margin:1%
 }
 
 .card_content {
@@ -352,6 +355,7 @@ PARTIE PARALLAXE
     color:var(--white);
     font-family:'Times New Roman', Times, serif;
     font-style: italic;
+    margin: 2%;
 }
 /*
 ========================================================================
@@ -382,3 +386,76 @@ footer{
 footer img{
     width: 70%;
 }
+
+
+
+/*
+========================================================================
+PARTIE RESPONSIVE (a partir de 950 de largeur ca devient compliqué)
+========================================================================
+*/
+
+@media (max-width: 950px) { 
+
+
+
+
+    nav{
+        flex-direction: column;
+    }
+    nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #logo {
+        display: none;
+    }
+    #social_network{
+        display: none;
+    }
+    header {
+        flex-direction: column;
+    }
+    #img_header img{
+        max-width: 100%;
+        height: 100%;
+    }
+
+
+
+
+    .tradition_content{
+        max-width: 100vw;
+        margin-bottom: 2%;
+    }
+    #tradition{
+        height: auto;
+    }
+    .tradition_box:nth-child(1){
+        flex-direction: column-reverse;
+    }
+    .tradition_box {
+        flex-direction: column;
+    }
+
+
+    #galerie {
+        flex-direction: column;
+    }
+    #galerie figure {
+        width: 100%;
+    }
+
+
+
+
+    #cards {
+        flex-direction: column;
+    }
+
+    #parallaxe p {
+        margin: 2% 10%;
+    }
+
+ }
