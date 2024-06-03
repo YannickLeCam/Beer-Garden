@@ -45,9 +45,6 @@ header #img_header {
 }
 
 
-
-
-
 /*
 ========================================================================
 PARTIE NAV
@@ -254,7 +251,8 @@ PARTIE GALERIE
     object-fit: fill;
     background-color:	rgba(197, 157, 95,0.85);
     transition: 1s;
-    opacity: 0; 
+    opacity: 0;
+    z-index: 4;
 }
 
 .hover_content i{
@@ -267,17 +265,18 @@ PARTIE GALERIE
 #galerie figure:hover .hover_content {
     opacity: 1; 
     transform: scale(1);
-    transition: 2s;
+    transition: 1s;
 }
 #galerie figure:hover i{
-    transition: 2s;
+    transition: 1.5s;
     transform: rotate(225deg);
 }
-/*
+
 #galerie figure:hover img {
     transform: scale(1.1);
+    transition: 1s;
 }
-*/
+
 
 /*
 ========================================================================
@@ -322,7 +321,12 @@ PARTIE CARD
 
 .card:hover h1 {
     color: var(--brown);
-    transition: 0.5s;
+    transition: 1s;
+}
+
+.card:hover img{
+    filter: sepia(100%);
+    transition: 1s;
 }
 
 /*
