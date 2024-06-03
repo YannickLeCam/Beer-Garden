@@ -8,6 +8,7 @@ PARTIE GLOBAL
     margin: 0;
     padding: 0;
     font-family: "Oswald", sans-serif;
+    box-sizing: border-box;
 }
 
 :root{
@@ -51,9 +52,8 @@ PARTIE NAV
 ========================================================================
 */
 nav{
-    background-color: rgba(0, 0, 0, 0.5);;
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -61,6 +61,10 @@ nav{
     position: fixed;
     top: 0;
     z-index: 99; /*Car les éléments de la gallerie passait par dessus*/
+}
+
+nav i {
+    display: flex;
 }
 
 nav ul {
@@ -179,7 +183,7 @@ PARTIE TRADITION
     font-style: normal;
 }
 .tradition_content h2 {
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, sans-serif;
     font-style: italic;
 }
 .tradition_content p{
@@ -374,7 +378,7 @@ PARTIE MAPS
 
 /*
 ========================================================================
-PARTIE MAPS
+PARTIE FOOTER
 ========================================================================
 */
 
@@ -403,15 +407,73 @@ PARTIE RESPONSIVE (a partir de 950 de largeur ca devient compliqué)
 
 
 
-
-    nav{
-        flex-direction: column;
+    .hide{
+        display: none;
     }
-    nav ul{
-        flex-direction: column;
+
+    .visible{
+        display: flex;
+    }
+    
+    #close_button{
+        max-height: 10vh;
+        height: 100%;
+        width: 100%;
         justify-content: center;
         align-items: center;
     }
+    #burger_button{
+        min-height: 100%;
+        min-width: 100%;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        height: 10vh;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .deroule{
+        height: 100vh;
+    }
+    nav i {
+        display: flex;
+        color: var(--white);
+        font-weight:500;
+        font-size: 35px;
+    }
+    nav ul{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        gap: 0;
+    }
+    nav li {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+    }
+    nav a {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        min-width: 100%;
+    }
+
+
     #logo {
         display: none;
     }

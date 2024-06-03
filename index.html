@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beer Garden</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="CSS/style.css" rel="stylesheet" />
+    <link href="CSS/style.css" rel="stylesheet">
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBuPYl4q8yK2afFTiPfQtc7L67diVxFC04&callback=initMap"></script>
-    <script src="JS/map.js"></script>
+
+
     
     
 </head>
@@ -19,10 +20,12 @@
     <div id="wrapper">
         <header>
             <nav>
-                <div id="logo">
-                    <img src="img/logo-light.png" alt="">
-                </div>
-                <ul>
+                <i class="fa-solid fa-bars" id="burger_button"></i>
+                <i class="fa-solid fa-xmark hide" id="close_button"></i>
+                <figure id="logo">
+                    <img src="img/logo-light.png" alt="logo Révolver en blanc">
+                </figure>
+                <ul id="menu">
                     <li><a href="">Home</a></li>
                     <li><a href="">Tradition</a></li>
                     <li><a href="">Services</a></li>
@@ -37,7 +40,7 @@
             </nav>
             <div id="img_header">
                 <figure>
-                    <img src="img/h5-slider-graphic.png" alt="">
+                    <img src="img/h5-slider-graphic.png" alt="fût de bière avec une indication que beer garden">
                 </figure>
             </div>
         </header>
@@ -48,30 +51,30 @@
 
         <div id="tradition">
             <div class="tradition_box">
-                <div class="tradition_content">
+                <article class="tradition_content">
                     <h1>Beer tradition</h1>
                     <h2>Tons of shortcodes provide countless options</h2>
                     <p>Edge Themes give you something you need to create an amazing website. Designed and built with can, filled with creative elements ans useful options, and completely user-friendly. Set up your website and with ease. From image galleries to various interactive features you can mix and match all elements</p>
                     <button>Read more</button>
-                </div>
+                </article>
                 <div class="tradition_img" id="tradition_template_1">
                     <figure>
-                        <img src="img/h5-holder-image-1.png" alt="">
+                        <img src="img/h5-holder-image-1.png" alt="un fut de bière ou dessus il y a marqué Best beer tradition for you">
                     </figure>
                 </div>
             </div>
             <div class="tradition_box">
                 <div class="tradition_img" id="tradition_template_2">
                     <figure>
-                        <img src="img/h5-holder-image-2.png" alt="">
+                        <img src="img/h5-holder-image-2.png" alt="pinte de bière ou dessus il y a marqué Drink beer a good reason to meet with friends">
                     </figure>
                 </div>
-                <div class="tradition_content">
+                <article class="tradition_content">
                     <h1>Pub Story</h1>
                     <h2>Tons of shortcodes provide countless options</h2>
                     <p>Edge Themes give you something you need to create an amazing website. Designed and built with can, filled with creative elements ans useful options, and completely user-friendly. Set up your website and with ease. From image galleries to various interactive features you can mix and match all elements</p>
                     <button>Read more</button>
-                </div>
+                </article>
             </div>
         </div>
 
@@ -80,25 +83,25 @@
                 <div class="hover_content">
                     <i class="fa-regular fa-circle-xmark"></i>
                 </div>
-                <img src="img/h5-gallery-img-1-477x477.jpg" alt="">
+                <img src="img/h5-gallery-img-1-477x477.jpg" alt="bar peuplé de clients">
             </figure>
             <figure>
                 <div class="hover_content">
                     <i class="fa-regular fa-circle-xmark"></i>
                 </div>
-                <img src="img/h5-gallery-img-2-477x477.jpg" alt="">
+                <img src="img/h5-gallery-img-2-477x477.jpg" alt="pintes de bière qui s'entrechoquent">
             </figure>
             <figure>
                 <div class="hover_content">
                     <i class="fa-regular fa-circle-xmark"></i>
                 </div>
-                <img src="img/h5-gallery-img-3-477x477.jpg" alt="">
+                <img src="img/h5-gallery-img-3-477x477.jpg" alt="bar vide avec moulte bières et menues">
             </figure>
             <figure>
                 <div class="hover_content">
                     <i class="fa-regular fa-circle-xmark"></i>
                 </div>
-                <img src="img/h5-gallery-img-4-477x477.jpg" alt="">
+                <img src="img/h5-gallery-img-4-477x477.jpg" alt="table avec 3 personnes savourant un plat accompagné d'une bière">
             </figure>
         </div>
 
@@ -106,7 +109,7 @@
             <div class="card">
                 <div class="card_header">
                     <figure>
-                        <img src="img/h5-icon-1.png" alt="">
+                        <img src="img/h5-icon-1.png" alt="graine de houblon">
                     </figure>
                 </div>
                 <div class="card_content">
@@ -117,7 +120,7 @@
             <div class="card">
                 <div class="card_header">
                     <figure>
-                        <img src="img/h5-icon-2.png" alt="">
+                        <img src="img/h5-icon-2.png" alt="fut de bière">
                     </figure>
                 </div>
                 <div class="card_content">
@@ -128,7 +131,7 @@
             <div class="card">
                 <div class="card_header">
                     <figure>
-                        <img src="img/h5-icon-3.png" alt="">
+                        <img src="img/h5-icon-3.png" alt="pinte">
                     </figure>
                 </div>
                 <div class="card_content">
@@ -139,7 +142,7 @@
             <div class="card">
                 <div class="card_header">
                     <figure>
-                        <img src="img/h5-icon-4.png" alt="">
+                        <img src="img/h5-icon-4.png" alt="bouteille de bière et d'un verre de bière">
                     </figure>
                 </div>
                 <div class="card_content">
@@ -159,9 +162,11 @@
         </div>
         <footer>
             <figure>
-                <img src="img/footer-logo.png" alt="" srcset="">
+                <img src="img/footer-logo.png" alt="logo Revolver">
             </figure>
         </footer>
     </div>
+    <script src="JS/burger_menu.js"></script>
+    <script src="JS/map.js"></script>
 </body>
 </html>
