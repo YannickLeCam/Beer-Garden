@@ -185,6 +185,8 @@ PARTIE TRADITION
 .tradition_content h2 {
     font-family:'Times New Roman', Times, sans-serif;
     font-style: italic;
+    margin: 0% 5%;
+    text-align: center;
 }
 .tradition_content p{
     font-family: "Raleway", sans-serif;
@@ -414,7 +416,7 @@ PARTIE RESPONSIVE (a partir de 950 de largeur ca devient compliqué)
     .visible{
         display: flex;
     }
-    
+
     #close_button{
         max-height: 10vh;
         height: 100%;
