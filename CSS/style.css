@@ -18,6 +18,7 @@ PARTIE GLOBAL
 #wrapper {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 /*
 ========================================================================
@@ -357,3 +358,27 @@ PARTIE PARALLAXE
 PARTIE MAPS
 ========================================================================
 */
+#maps {
+    background: #d6d6d6;
+    height: 60vh;
+    width: 100%;
+}
+
+/*
+========================================================================
+PARTIE MAPS
+========================================================================
+*/
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: var(--black);
+}
+
+footer img{
+    width: 70%;
+}
