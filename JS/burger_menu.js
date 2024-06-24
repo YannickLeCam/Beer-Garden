@@ -1,9 +1,12 @@
+const navElements = document.getElementsByTagName("nav");
+const nav = navElements[0]; // On ne veut que le premier nav
+const burger_button=document.getElementById("burger_button");
+const menu = document.getElementById("menu");
+const close_button=document.getElementById("close_button");
+
 if (window.matchMedia("(max-width: 950px)").matches) {
-    const navElements = document.getElementsByTagName("nav");
-    const nav = navElements[0]; // On ne veut que le premier nav
-    const burger_button=document.getElementById("burger_button");
-    const menu = document.getElementById("menu");
-    const close_button=document.getElementById("close_button");
+
+    burger_button.classList.remove("hide");
     burger_button.classList.add("visible");
 
     burger_button.addEventListener("click",()=>{
@@ -27,4 +30,7 @@ if (window.matchMedia("(max-width: 950px)").matches) {
         menu.classList.remove("visible");
     })
 
+}else{
+    close_button.classList.add("hide");
+    burger_button.classList.add("hide");
 }
