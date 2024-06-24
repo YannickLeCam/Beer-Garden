@@ -415,22 +415,26 @@ PARTIE RESPONSIVE (a partir de 950 de largeur ca devient compliqué)
 
     .visible{
         display: flex;
+        justify-content: flex-start;
+        align-items: center;
     }
 
     #close_button{
         max-height: 10vh;
         height: 100%;
         width: 100%;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
+        margin-right: 10%;
     }
     #burger_button{
         min-height: 100%;
         min-width: 100%;
         height: 100%;
         width: 100%;
-        justify-content: center;
+        justify-content: end;
         align-items: center;
+        margin-right: 10%;
     }
     nav{
         display: flex;
@@ -442,6 +446,8 @@ PARTIE RESPONSIVE (a partir de 950 de largeur ca devient compliqué)
     }
     .deroule{
         height: 100vh;
+        transform: translateX(0);  
+        transition: 1s;  
     }
     nav i {
         display: flex;
@@ -454,31 +460,36 @@ PARTIE RESPONSIVE (a partir de 950 de largeur ca devient compliqué)
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 50vh;
         width: 100vw;
         gap: 0;
     }
     nav li {
-        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10%;
+    }
+    nav a {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
-        width: 100%;
+        width: 100vw;
     }
-    nav a {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100%;
-        min-width: 100%;
+    #logo{
+        position: absolute;
+        left: 10%;
+    }
+    .deroule #logo{
+        position: absolute;
+        top: 2.5%;
+        left: 10%;
+    }
+    .enroule{
+        transition: 1s;
     }
 
-
-    #logo {
-        display: none;
-    }
     #social_network{
         display: none;
     }
@@ -505,6 +516,9 @@ PARTIE RESPONSIVE (a partir de 950 de largeur ca devient compliqué)
     }
     .tradition_box {
         flex-direction: column;
+    }
+    .tradition_content{
+        margin-bottom: 3vh;
     }
 
 

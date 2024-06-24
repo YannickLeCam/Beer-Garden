@@ -5,6 +5,7 @@ if (window.matchMedia("(max-width: 950px)").matches) {
     const menu = document.getElementById("menu");
     const close_button=document.getElementById("close_button");
     burger_button.classList.add("visible");
+
     burger_button.addEventListener("click",()=>{
         close_button.classList.add("visible");
         close_button.classList.remove("hide");
@@ -18,6 +19,7 @@ if (window.matchMedia("(max-width: 950px)").matches) {
 
     close_button.addEventListener("click",()=>{
         nav.classList.remove("deroule");
+        nav.classList.add("enroule");
         close_button.classList.add("hide");
         close_button.classList.remove("visible");
         burger_button.classList.remove("hide");
